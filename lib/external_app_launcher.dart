@@ -45,7 +45,7 @@ class LaunchApp {
 
     return await _channel.invokeMethod('openApp', {
       'package_name': packageName,
-      'open_store': openStore == false ? "false" : "open it",
+      'open_store': openStore ?? false,
       'app_store_link': appStoreLink
     }).then((value) {
       if (value == "app_opened") {
