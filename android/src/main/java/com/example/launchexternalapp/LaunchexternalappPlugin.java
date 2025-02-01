@@ -85,7 +85,7 @@ public class LaunchexternalappPlugin implements MethodCallHandler, FlutterPlugin
         return "app_opened";
       }
     } else {
-      if (openStore.toString() != "false" && openStore != false) {
+      if (openStore != false) {
         Intent intent1 = new Intent(Intent.ACTION_VIEW);
         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent1.setData(android.net.Uri.parse("https://play.google.com/store/apps/details?id=" + packageName));
